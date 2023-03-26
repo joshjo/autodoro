@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA02CFC329CFEAD700455BEC /* AutodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFC229CFEAD700455BEC /* AutodoroApp.swift */; };
+		CA02CFC529CFEAD700455BEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFC429CFEAD700455BEC /* ContentView.swift */; };
+		CA02CFC729CFEAD800455BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA02CFC629CFEAD800455BEC /* Assets.xcassets */; };
+		CA02CFCA29CFEAD800455BEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA02CFC929CFEAD800455BEC /* Preview Assets.xcassets */; };
+		CA02CFD529CFEAD800455BEC /* AutodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFD429CFEAD800455BEC /* AutodoroTests.swift */; };
+		CA02CFDF29CFEAD800455BEC /* AutodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFDE29CFEAD800455BEC /* AutodoroUITests.swift */; };
+		CA02CFE129CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFE029CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA02CFD129CFEAD800455BEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA02CFB729CFEAD700455BEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA02CFBE29CFEAD700455BEC;
+			remoteInfo = Autodoro;
+		};
+		CA02CFDB29CFEAD800455BEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA02CFB729CFEAD700455BEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA02CFBE29CFEAD700455BEC;
+			remoteInfo = Autodoro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA02CFBF29CFEAD700455BEC /* Autodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA02CFC229CFEAD700455BEC /* AutodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodoroApp.swift; sourceTree = "<group>"; };
+		CA02CFC429CFEAD700455BEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CA02CFC629CFEAD800455BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA02CFC929CFEAD800455BEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CA02CFCB29CFEAD800455BEC /* Autodoro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Autodoro.entitlements; sourceTree = "<group>"; };
+		CA02CFD029CFEAD800455BEC /* AutodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA02CFD429CFEAD800455BEC /* AutodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodoroTests.swift; sourceTree = "<group>"; };
+		CA02CFDA29CFEAD800455BEC /* AutodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA02CFDE29CFEAD800455BEC /* AutodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodoroUITests.swift; sourceTree = "<group>"; };
+		CA02CFE029CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodoroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA02CFBC29CFEAD700455BEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA02CFCD29CFEAD800455BEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA02CFD729CFEAD800455BEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA02CFB629CFEAD700455BEC = {
+			isa = PBXGroup;
+			children = (
+				CA02CFC129CFEAD700455BEC /* Autodoro */,
+				CA02CFD329CFEAD800455BEC /* AutodoroTests */,
+				CA02CFDD29CFEAD800455BEC /* AutodoroUITests */,
+				CA02CFC029CFEAD700455BEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA02CFC029CFEAD700455BEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA02CFBF29CFEAD700455BEC /* Autodoro.app */,
+				CA02CFD029CFEAD800455BEC /* AutodoroTests.xctest */,
+				CA02CFDA29CFEAD800455BEC /* AutodoroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA02CFC129CFEAD700455BEC /* Autodoro */ = {
+			isa = PBXGroup;
+			children = (
+				CA02CFC229CFEAD700455BEC /* AutodoroApp.swift */,
+				CA02CFC429CFEAD700455BEC /* ContentView.swift */,
+				CA02CFC629CFEAD800455BEC /* Assets.xcassets */,
+				CA02CFCB29CFEAD800455BEC /* Autodoro.entitlements */,
+				CA02CFC829CFEAD800455BEC /* Preview Content */,
+			);
+			path = Autodoro;
+			sourceTree = "<group>";
+		};
+		CA02CFC829CFEAD800455BEC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CA02CFC929CFEAD800455BEC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CA02CFD329CFEAD800455BEC /* AutodoroTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA02CFD429CFEAD800455BEC /* AutodoroTests.swift */,
+			);
+			path = AutodoroTests;
+			sourceTree = "<group>";
+		};
+		CA02CFDD29CFEAD800455BEC /* AutodoroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA02CFDE29CFEAD800455BEC /* AutodoroUITests.swift */,
+				CA02CFE029CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift */,
+			);
+			path = AutodoroUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA02CFBE29CFEAD700455BEC /* Autodoro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA02CFE429CFEAD800455BEC /* Build configuration list for PBXNativeTarget "Autodoro" */;
+			buildPhases = (
+				CA02CFBB29CFEAD700455BEC /* Sources */,
+				CA02CFBC29CFEAD700455BEC /* Frameworks */,
+				CA02CFBD29CFEAD700455BEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Autodoro;
+			productName = Autodoro;
+			productReference = CA02CFBF29CFEAD700455BEC /* Autodoro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA02CFCF29CFEAD800455BEC /* AutodoroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA02CFE729CFEAD800455BEC /* Build configuration list for PBXNativeTarget "AutodoroTests" */;
+			buildPhases = (
+				CA02CFCC29CFEAD800455BEC /* Sources */,
+				CA02CFCD29CFEAD800455BEC /* Frameworks */,
+				CA02CFCE29CFEAD800455BEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA02CFD229CFEAD800455BEC /* PBXTargetDependency */,
+			);
+			name = AutodoroTests;
+			productName = AutodoroTests;
+			productReference = CA02CFD029CFEAD800455BEC /* AutodoroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA02CFD929CFEAD800455BEC /* AutodoroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA02CFEA29CFEAD800455BEC /* Build configuration list for PBXNativeTarget "AutodoroUITests" */;
+			buildPhases = (
+				CA02CFD629CFEAD800455BEC /* Sources */,
+				CA02CFD729CFEAD800455BEC /* Frameworks */,
+				CA02CFD829CFEAD800455BEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA02CFDC29CFEAD800455BEC /* PBXTargetDependency */,
+			);
+			name = AutodoroUITests;
+			productName = AutodoroUITests;
+			productReference = CA02CFDA29CFEAD800455BEC /* AutodoroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA02CFB729CFEAD700455BEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CA02CFBE29CFEAD700455BEC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CA02CFCF29CFEAD800455BEC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CA02CFBE29CFEAD700455BEC;
+					};
+					CA02CFD929CFEAD800455BEC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CA02CFBE29CFEAD700455BEC;
+					};
+				};
+			};
+			buildConfigurationList = CA02CFBA29CFEAD700455BEC /* Build configuration list for PBXProject "Autodoro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA02CFB629CFEAD700455BEC;
+			productRefGroup = CA02CFC029CFEAD700455BEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA02CFBE29CFEAD700455BEC /* Autodoro */,
+				CA02CFCF29CFEAD800455BEC /* AutodoroTests */,
+				CA02CFD929CFEAD800455BEC /* AutodoroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA02CFBD29CFEAD700455BEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA02CFCA29CFEAD800455BEC /* Preview Assets.xcassets in Resources */,
+				CA02CFC729CFEAD800455BEC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA02CFCE29CFEAD800455BEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA02CFD829CFEAD800455BEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA02CFBB29CFEAD700455BEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA02CFC529CFEAD700455BEC /* ContentView.swift in Sources */,
+				CA02CFC329CFEAD700455BEC /* AutodoroApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA02CFCC29CFEAD800455BEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA02CFD529CFEAD800455BEC /* AutodoroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA02CFD629CFEAD800455BEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA02CFE129CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift in Sources */,
+				CA02CFDF29CFEAD800455BEC /* AutodoroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA02CFD229CFEAD800455BEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA02CFBE29CFEAD700455BEC /* Autodoro */;
+			targetProxy = CA02CFD129CFEAD800455BEC /* PBXContainerItemProxy */;
+		};
+		CA02CFDC29CFEAD800455BEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA02CFBE29CFEAD700455BEC /* Autodoro */;
+			targetProxy = CA02CFDB29CFEAD800455BEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CA02CFE229CFEAD800455BEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA02CFE329CFEAD800455BEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CA02CFE529CFEAD800455BEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Autodoro/Autodoro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Autodoro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josuettito.Autodoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CA02CFE629CFEAD800455BEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Autodoro/Autodoro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Autodoro/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josuettito.Autodoro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CA02CFE829CFEAD800455BEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josuettito.AutodoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Autodoro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Autodoro";
+			};
+			name = Debug;
+		};
+		CA02CFE929CFEAD800455BEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josuettito.AutodoroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Autodoro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Autodoro";
+			};
+			name = Release;
+		};
+		CA02CFEB29CFEAD800455BEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josuettito.AutodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Autodoro;
+			};
+			name = Debug;
+		};
+		CA02CFEC29CFEAD800455BEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josuettito.AutodoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Autodoro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA02CFBA29CFEAD700455BEC /* Build configuration list for PBXProject "Autodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA02CFE229CFEAD800455BEC /* Debug */,
+				CA02CFE329CFEAD800455BEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA02CFE429CFEAD800455BEC /* Build configuration list for PBXNativeTarget "Autodoro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA02CFE529CFEAD800455BEC /* Debug */,
+				CA02CFE629CFEAD800455BEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA02CFE729CFEAD800455BEC /* Build configuration list for PBXNativeTarget "AutodoroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA02CFE829CFEAD800455BEC /* Debug */,
+				CA02CFE929CFEAD800455BEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA02CFEA29CFEAD800455BEC /* Build configuration list for PBXNativeTarget "AutodoroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA02CFEB29CFEAD800455BEC /* Debug */,
+				CA02CFEC29CFEAD800455BEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA02CFB729CFEAD700455BEC /* Project object */;
+}
