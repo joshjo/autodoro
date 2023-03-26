@@ -14,6 +14,9 @@
 		CA02CFD529CFEAD800455BEC /* AutodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFD429CFEAD800455BEC /* AutodoroTests.swift */; };
 		CA02CFDF29CFEAD800455BEC /* AutodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFDE29CFEAD800455BEC /* AutodoroUITests.swift */; };
 		CA02CFE129CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFE029CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift */; };
+		CA02CFF029D00A4F00455BEC /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA02CFEF29D00A4F00455BEC /* cat.wav */; };
+		CA02CFF229D00A7200455BEC /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFF129D00A7200455BEC /* SoundManager.swift */; };
+		CA02CFF429D012C300455BEC /* whistling.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA02CFF329D012C300455BEC /* whistling.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,10 @@
 		CA02CFDA29CFEAD800455BEC /* AutodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA02CFDE29CFEAD800455BEC /* AutodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodoroUITests.swift; sourceTree = "<group>"; };
 		CA02CFE029CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutodoroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA02CFEF29D00A4F00455BEC /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
+		CA02CFF129D00A7200455BEC /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		CA02CFF329D012C300455BEC /* whistling.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistling.wav; sourceTree = "<group>"; };
+		CA02CFF529D0170300455BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +82,7 @@
 		CA02CFB629CFEAD700455BEC = {
 			isa = PBXGroup;
 			children = (
+				CA02CFEE29D00A2F00455BEC /* Sounds */,
 				CA02CFC129CFEAD700455BEC /* Autodoro */,
 				CA02CFD329CFEAD800455BEC /* AutodoroTests */,
 				CA02CFDD29CFEAD800455BEC /* AutodoroUITests */,
@@ -95,11 +103,13 @@
 		CA02CFC129CFEAD700455BEC /* Autodoro */ = {
 			isa = PBXGroup;
 			children = (
+				CA02CFF529D0170300455BEC /* Info.plist */,
 				CA02CFC229CFEAD700455BEC /* AutodoroApp.swift */,
 				CA02CFC429CFEAD700455BEC /* ContentView.swift */,
 				CA02CFC629CFEAD800455BEC /* Assets.xcassets */,
 				CA02CFCB29CFEAD800455BEC /* Autodoro.entitlements */,
 				CA02CFC829CFEAD800455BEC /* Preview Content */,
+				CA02CFF129D00A7200455BEC /* SoundManager.swift */,
 			);
 			path = Autodoro;
 			sourceTree = "<group>";
@@ -127,6 +137,15 @@
 				CA02CFE029CFEAD800455BEC /* AutodoroUITestsLaunchTests.swift */,
 			);
 			path = AutodoroUITests;
+			sourceTree = "<group>";
+		};
+		CA02CFEE29D00A2F00455BEC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CA02CFF329D012C300455BEC /* whistling.wav */,
+				CA02CFEF29D00A4F00455BEC /* cat.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA02CFF029D00A4F00455BEC /* cat.wav in Resources */,
 				CA02CFCA29CFEAD800455BEC /* Preview Assets.xcassets in Resources */,
+				CA02CFF429D012C300455BEC /* whistling.wav in Resources */,
 				CA02CFC729CFEAD800455BEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +282,7 @@
 			files = (
 				CA02CFC529CFEAD700455BEC /* ContentView.swift in Sources */,
 				CA02CFC329CFEAD700455BEC /* AutodoroApp.swift in Sources */,
+				CA02CFF229D00A7200455BEC /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +444,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Autodoro/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Autodoro/Info.plist;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,6 +472,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Autodoro/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Autodoro/Info.plist;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
