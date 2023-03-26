@@ -17,6 +17,7 @@
 		CA02CFF029D00A4F00455BEC /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA02CFEF29D00A4F00455BEC /* cat.wav */; };
 		CA02CFF229D00A7200455BEC /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA02CFF129D00A7200455BEC /* SoundManager.swift */; };
 		CA02CFF429D012C300455BEC /* whistling.wav in Resources */ = {isa = PBXBuildFile; fileRef = CA02CFF329D012C300455BEC /* whistling.wav */; };
+		CA21E12829D07BE7003B6F19 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA21E12729D07BE7003B6F19 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CA02CFF129D00A7200455BEC /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		CA02CFF329D012C300455BEC /* whistling.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistling.wav; sourceTree = "<group>"; };
 		CA02CFF529D0170300455BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CA21E12729D07BE7003B6F19 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		CA02CFB629CFEAD700455BEC = {
 			isa = PBXGroup;
 			children = (
+				CA21E12729D07BE7003B6F19 /* UserData.swift */,
 				CA02CFEE29D00A2F00455BEC /* Sounds */,
 				CA02CFC129CFEAD700455BEC /* Autodoro */,
 				CA02CFD329CFEAD800455BEC /* AutodoroTests */,
@@ -282,6 +285,7 @@
 			files = (
 				CA02CFC529CFEAD700455BEC /* ContentView.swift in Sources */,
 				CA02CFC329CFEAD700455BEC /* AutodoroApp.swift in Sources */,
+				CA21E12829D07BE7003B6F19 /* UserData.swift in Sources */,
 				CA02CFF229D00A7200455BEC /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

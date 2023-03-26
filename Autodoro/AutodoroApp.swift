@@ -6,14 +6,11 @@
 //
 
 import SwiftUI
-import AVFoundation
-
-import AVKit
 
 
 enum Mode: Int {
-    case focus
-    case brake_time
+    case work
+    case break_
 }
 
 
@@ -30,50 +27,76 @@ extension String {
 }
 
 class StopWatch: ObservableObject {
-    @Published var counter: Int = 25
-    var lastCounter: Int = -1
-    @Published var mode: Mode = .focus  // 0 Is for focus time, 1 is for spare time
+    @Published var ticker: Int
+    var lastTicker: Int = -1
+    var workTime: Int
+    var seconds = 60
+    @Published var isPaused: Bool = false
+    var userData: UserData
+    @Published var mode: Mode  // 0 Is for focus time, 1 is for spare time
     var timer = Timer()
-    @State var audioPlayer: AVAudioPlayer!
+    
+    init(userData: UserData) {
+        self.userData = userData
+        let lastValue = userData.getLastValue()
+        self.workTime = userData.getWorkTime()
+        self.mode = userData.getLastMode() == Mode.work.rawValue ? Mode.work : Mode.break_
+        self.ticker = lastValue >= 0 ? lastValue : userData.getWorkTime()
+        self.ticker = self.ticker * 60
+    }
 
     func start() {
         SoundManager.instance.playSound(mode:self.mode)
-        self.timer = Timer.scheduledTimer(withTimeInterval: 60.0,
+        self.timer = Timer.scheduledTimer(withTimeInterval: Float64(self.seconds),
                                                    repeats: true) { _ in
-            self.counter -= 1
-            if (self.counter == 0) {
-                self.mode = self.mode == Mode.focus ? Mode.brake_time : Mode.focus
+            self.ticker -= self.seconds
+            self.userData.setLastValue(value: self.ticker)
+            if (self.ticker <= 0) {
                 self.restart()
             }
         }
     }
     
     func formatted() -> String {
-        return String(self.counter).padLeft(totalWidth: 2, with: "0")
+        return String(self.ticker / self.seconds).padLeft(totalWidth: 2, with: "0")
+    }
+    
+    func setTicker(value: Int) {
+        self.ticker = value * self.seconds
     }
     
     func restart() {
         self.timer.invalidate()
-        if (self.lastCounter >= 0) {
-            self.counter = self.lastCounter
+        if self.mode == Mode.work {
+            self.userData.increaseAutodoroCounter()
+            self.mode = Mode.break_
+            if self.userData.getAutodoroCounter() % self.userData.getBreaksToLong() == 0 {
+                self.setTicker(value: self.userData.getLongBreakTime())
+            } else {
+                self.setTicker(value: self.userData.getShortBreakTime())
+            }
         } else {
-            self.lastCounter = -1
-            self.counter = self.mode == Mode.focus ? 25 : 5
+            self.mode = Mode.work
+            self.setTicker(value: self.userData.getWorkTime())
         }
+        self.userData.setLastMode(value: self.mode)
         SoundManager.instance.playSound(mode:self.mode)
         self.start();
     }
     
     func pause() {
-        self.lastCounter = self.counter;
+        self.isPaused = true
+        self.lastTicker = self.ticker;
         self.timer.invalidate()
     }
     
     func unpause() {
-        self.restart()
+        self.isPaused = false
+        self.timer.invalidate()
+        self.ticker = self.lastTicker
+        self.lastTicker = -1
+        self.start()
     }
-    
-    
 }
 
 struct MyTextLabelView: View {
@@ -86,9 +109,9 @@ struct MyTextLabelView: View {
 
 @main
 struct AutodoroApp: App {
-    let customIcon = NSImage(named: "phone-call")
     @State var paused: Bool = false
-    @ObservedObject var stopWatch = StopWatch()
+    @ObservedObject var stopWatch: StopWatch
+    var userData: UserData
     
     var body: some Scene {
         MenuBarExtra {
@@ -101,16 +124,21 @@ struct AutodoroApp: App {
                     stopWatch.pause()
                 }
             }.keyboardShortcut("1")
+            Button("Autodoros: \(userData.getAutodoroCounter())") {
+                
+            }
             Divider()
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
             }.keyboardShortcut("q")
         } label: {
-            Text("\(stopWatch.mode == Mode.focus ? "": "♥ ")") + Text(String(stopWatch.formatted()))
+            Text("\(stopWatch.isPaused ? "⏸ " : stopWatch.mode == Mode.work ? "": "★ ")") + Text(String(stopWatch.formatted())).monospacedDigit()
         }
     }
     
     init() {
+        userData = UserData()
+        stopWatch = StopWatch(userData: userData)
         stopWatch.start()
     }
 }

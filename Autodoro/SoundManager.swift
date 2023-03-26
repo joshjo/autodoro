@@ -15,7 +15,7 @@ class SoundManager {
     var player: AVAudioPlayer?
     
     func playSound(mode: Mode) {
-        guard let path = Bundle.main.path(forResource: mode == Mode.focus ? "whistling" : "cat", ofType: "wav") else { return }
+        guard let path = Bundle.main.path(forResource: mode == Mode.work ? "whistling" : "cat", ofType: "wav") else { return }
         let url = URL(fileURLWithPath: path)
         do {
             player = try AVAudioPlayer(contentsOf: url)
