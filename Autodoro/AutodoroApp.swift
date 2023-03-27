@@ -27,7 +27,7 @@ extension String {
 }
 
 class StopWatch: ObservableObject {
-    @Published var ticker: Int
+    @Published var ticker: Int!
     var lastTicker: Int = -1
     var workTime: Int
     var seconds = 60
@@ -41,8 +41,7 @@ class StopWatch: ObservableObject {
         let lastValue = userData.getLastValue()
         self.workTime = userData.getWorkTime()
         self.mode = userData.getLastMode() == Mode.work.rawValue ? Mode.work : Mode.break_
-        self.ticker = lastValue >= 0 ? lastValue : userData.getWorkTime()
-        self.ticker = self.ticker * 60
+        self.setTicker(lastValue >= 0 ? lastValue : userData.getWorkTime())
     }
 
     func start() {
@@ -50,7 +49,7 @@ class StopWatch: ObservableObject {
         self.timer = Timer.scheduledTimer(withTimeInterval: Float64(self.seconds),
                                                    repeats: true) { _ in
             self.ticker -= self.seconds
-            self.userData.setLastValue(value: self.ticker)
+            self.userData.setLastValue(value: self.ticker / self.seconds)
             if (self.ticker <= 0) {
                 self.restart()
             }
@@ -61,8 +60,23 @@ class StopWatch: ObservableObject {
         return String(self.ticker / self.seconds).padLeft(totalWidth: 2, with: "0")
     }
     
-    func setTicker(value: Int) {
+    func setTicker(_ value: Int) {
+        print("value \(value)")
         self.ticker = value * self.seconds
+    }
+    
+    func setFocus() {
+        self.mode = Mode.work
+        self.userData.setLastMode(value: self.mode)
+        self.setTicker(self.userData.getWorkTime())
+        self.start()
+    }
+    
+    func setBreak() {
+        self.mode = Mode.break_
+        self.userData.setLastMode(value: self.mode)
+        self.setTicker(self.userData.getShortBreakTime())
+        self.start()
     }
     
     func restart() {
@@ -71,13 +85,13 @@ class StopWatch: ObservableObject {
             self.userData.increaseAutodoroCounter()
             self.mode = Mode.break_
             if self.userData.getAutodoroCounter() % self.userData.getBreaksToLong() == 0 {
-                self.setTicker(value: self.userData.getLongBreakTime())
+                self.setTicker(self.userData.getLongBreakTime())
             } else {
-                self.setTicker(value: self.userData.getShortBreakTime())
+                self.setTicker(self.userData.getShortBreakTime())
             }
         } else {
             self.mode = Mode.work
-            self.setTicker(value: self.userData.getWorkTime())
+            self.setTicker(self.userData.getWorkTime())
         }
         self.userData.setLastMode(value: self.mode)
         SoundManager.instance.playSound(mode:self.mode)
@@ -124,9 +138,14 @@ struct AutodoroApp: App {
                     stopWatch.pause()
                 }
             }.keyboardShortcut("1")
-            Button("Autodoros: \(userData.getAutodoroCounter())") {
-                
-            }
+            Text("Autodoros: \(userData.getAutodoroCounter())")
+//            Divider()
+//            Button("Focus") {
+//                self.stopWatch.setFocus()
+//            }
+//            Button("Break") {
+//                self.stopWatch.setBreak()
+//            }
             Divider()
             Button("Quit") {
                 NSApplication.shared.terminate(nil)

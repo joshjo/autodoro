@@ -28,7 +28,7 @@ class UserData {
             Key.lastValue.rawValue: -1,
             Key.lastMode.rawValue: Mode.work.rawValue,
             Key.autodoroCounter.rawValue: 0,
-            Key.workTime.rawValue: 17,
+            Key.workTime.rawValue: 25,
             Key.shortBreakTime.rawValue: 5,
             Key.longBreakTime.rawValue: 15,
             Key.breaksToLong.rawValue: 4
